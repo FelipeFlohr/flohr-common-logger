@@ -4,6 +4,7 @@ import InfoLevel from "./levels/info";
 import LogLevel from "./levels/level";
 import OkayLevel from "./levels/okay";
 import WarnLevel from "./levels/warn";
+import LoggerImpl from "./logger/impl/logger_impl";
 import LoggerWithFileImpl from "./logger/impl/logger_with_file_impl";
 import LoggerWithoutFileImpl from "./logger/impl/logger_without_file_impl";
 import Logger from "./logger/logger";
@@ -23,6 +24,7 @@ export {
     OkayLevel,
     LogLevel,
     Logger as LoggerAbstraction,
+    LoggerImpl as LoggerImplementation,
     LoggerWithFileImpl as FileLogger,
     LoggerWithoutFileImpl as Logger,
     IMessagePrinter as MessagePrinterAbstraction,

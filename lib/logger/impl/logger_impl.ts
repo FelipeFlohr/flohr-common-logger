@@ -1,9 +1,9 @@
 import { Queue } from "@felipeflohr/flohr-common-utils";
 import MessageGeneratorImpl from "../../properties/message_generator/impl/message_generator_impl";
-import ConsoleMessagePrinter from "../../properties/message_printer/impl/console_message_printer";
 import Logger from "../logger";
 import LogLevel, { logLevelImpl } from "../../levels/level";
 import FileWriter from "../../properties/file_writer/file_writer";
+import IMessagePrinter from "../../properties/message_printer/message_printer";
 
 /**
  * Implementation of the logger.
@@ -14,11 +14,11 @@ import FileWriter from "../../properties/file_writer/file_writer";
 export default class LoggerImpl extends Logger {
     private readonly queue: Queue<string, void>;
 
-    protected constructor(fileWriter?: FileWriter) {
+    public constructor(messagePrinter?: IMessagePrinter, fileWriter?: FileWriter) {
         super(
             new MessageGeneratorImpl(),
             logLevelImpl,
-            new ConsoleMessagePrinter(),
+            messagePrinter,
             fileWriter,
         );
 

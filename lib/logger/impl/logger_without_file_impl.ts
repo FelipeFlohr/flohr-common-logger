@@ -1,3 +1,4 @@
+import ConsoleMessagePrinter from "../../properties/message_printer/impl/console_message_printer";
 import LoggerImpl from "./logger_impl";
 
 /**
@@ -10,6 +11,6 @@ import LoggerImpl from "./logger_impl";
  */
 export default class LoggerWithoutFileImpl extends LoggerImpl {
     public constructor() {
-        super(undefined);
+        super(new ConsoleMessagePrinter());
     }
 }
