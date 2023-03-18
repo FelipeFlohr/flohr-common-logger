@@ -1,7 +1,7 @@
 {
     "name": "@felipeflohr/flohr-common-logger",
     "version": "1.0.0",
-    "description": "Logger used in my personal projects.",
+    "description": "Logger used in my personal projects",
     "publishConfig": {
         "registry": "https://npm.pkg.github.com/@FelipeFlohr",
         "access": "public"
