@@ -1,6 +1,6 @@
 {
     "name": "@felipeflohr/flohr-common-logger",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Logger used in my personal projects",
     "publishConfig": {
         "registry": "https://npm.pkg.github.com/@FelipeFlohr",
@@ -49,9 +49,7 @@
         "typescript": "^4.9.5"
     },
     "dependencies": {
-        "@felipeflohr/flohr-common-injection": "^1.0.0",
-        "@felipeflohr/flohr-common-utils": "^1.1.2",
-        "reflect-metadata": "^0.1.13"
+        "@felipeflohr/flohr-common-utils": "^1.1.2"
     },
     "jest": {
         "preset": "ts-jest",

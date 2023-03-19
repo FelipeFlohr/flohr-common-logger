@@ -1,4 +1,3 @@
-import { Injectable } from "@felipeflohr/flohr-common-injection";
 import NodeFileWriter from "../../properties/file_writer/impl/node_file_writer";
 import ConsoleMessagePrinter from "../../properties/message_printer/impl/console_message_printer";
 import LoggerImpl from "./logger_impl";
@@ -11,7 +10,6 @@ import LoggerImpl from "./logger_impl";
  * @since 18/03/2023
  * @author Felipe Matheus Flohr
  */
-@Injectable()
 export default class LoggerWithFileImpl extends LoggerImpl {
     public constructor(folderPathToSaveLog: string) {
         super(new ConsoleMessagePrinter(), new NodeFileWriter({ folderToSaveLogFile: folderPathToSaveLog }));

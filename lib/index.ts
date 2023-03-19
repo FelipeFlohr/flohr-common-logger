@@ -16,8 +16,6 @@ import MessageGenerator from "./properties/message_generator/message_generator";
 import ConsoleMessagePrinter from "./properties/message_printer/impl/console_message_printer";
 import IMessagePrinter from "./properties/message_printer/message_printer";
 
-import "reflect-metadata";
-
 export {
     FatalLevel,
     ErrorLevel,

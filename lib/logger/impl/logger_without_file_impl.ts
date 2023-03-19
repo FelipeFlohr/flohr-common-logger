@@ -1,4 +1,3 @@
-import { Injectable } from "@felipeflohr/flohr-common-injection";
 import ConsoleMessagePrinter from "../../properties/message_printer/impl/console_message_printer";
 import LoggerImpl from "./logger_impl";
 
@@ -10,7 +9,6 @@ import LoggerImpl from "./logger_impl";
  * @since 18/03/2023
  * @author Felipe Matheus Flohr
  */
-@Injectable()
 export default class LoggerWithoutFileImpl extends LoggerImpl {
     public constructor() {
         super(new ConsoleMessagePrinter());
