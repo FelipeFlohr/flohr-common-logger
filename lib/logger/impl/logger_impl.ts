@@ -1,9 +1,10 @@
-import { Queue } from "@felipeflohr/flohr-common-utils";
 import MessageGeneratorImpl from "../../properties/message_generator/impl/message_generator_impl";
 import Logger from "../logger";
 import LogLevel, { logLevelImpl } from "../../levels/level";
 import FileWriter from "../../properties/file_writer/file_writer";
 import IMessagePrinter from "../../properties/message_printer/message_printer";
+import { Injectable } from "@felipeflohr/flohr-common-injection";
+import { Queue } from "@felipeflohr/flohr-common-utils";
 
 /**
  * Implementation of the logger.
@@ -11,6 +12,7 @@ import IMessagePrinter from "../../properties/message_printer/message_printer";
  * @since 18/03/2023
  * @author Felipe Matheus Flohr
  */
+@Injectable()
 export default class LoggerImpl extends Logger {
     private readonly queue: Queue<string, void>;
 
